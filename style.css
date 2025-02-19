@@ -1,10 +1,58 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .container {
-    width: 640px;
-    height: 640px;
+    width: 320px;
+    height: 320px;
     border: 2px solid black;
     margin: auto;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    display: block;
+    margin: 12px 0;
+    width: 128px;
+    font-size: 18px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+.main {
+    display: flex;
+    overflow: scroll;
+}
+
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.397);
+    color: white;
+    padding: 12px;
+    margin: 0px 4px;
+    
+}
+
+input {
+    margin: 10px auto;
+    padding: 4px 12px;
+    width: 128px;
+}
+
+.content {
+    display: flex;
+    max-width: 240px;
+    gap: 12px;
 }
