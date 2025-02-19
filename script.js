@@ -25,12 +25,10 @@ document.addEventListener('click',(e)=>{
         customInput.setAttribute('type', 'number')
         customInput.setAttribute('placeholder', 'Enter a Number')
         customButton.addEventListener('click', ()=>{
-            if(typeof (customInput.value) != 'number'){
-                alert("You haven't entered a number.")
-            }else if(parseInt(customInput.value)>64){
+            if((customInput.value)>64){
                 alert("This is too big! Choose a smaller one!")
             }else{
-                mainEngine(parseInt(customInput.value))
+                mainEngine((customInput.value))
             }
         })
     }
