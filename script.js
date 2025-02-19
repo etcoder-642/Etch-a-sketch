@@ -2,7 +2,7 @@
 const container = document.querySelector(".container");
 const content = document.querySelector('.content')
 
-// for loop to generate a lot of div elements that will be fitted inside the canvas
+// an event listener to identify and respond when the buttons are clicked
 
 document.addEventListener('click',(e)=>{
     let target = e.target.className
