@@ -48,12 +48,10 @@ function mainEngine(value) {
     // a variable to identify the width and height of the element
     let styles = window.getComputedStyle(container);
     let width = parseInt(styles.width);
-    console.log(width + ' - this is the width')
     let height = parseInt(styles.height);
 
     // generating the grid
     let j = (width*height)/ (16*16)
-    console.log(j + ' - this is j')
     for(i=0;i<j;i++){
         let div = document.createElement("div")
         div.style.width = "14px";
@@ -64,9 +62,19 @@ function mainEngine(value) {
     
         container.appendChild(div);
 
-        // making the trace happen when hovered    
-        div.addEventListener('mouseenter', ()=>{
-            div.style.backgroundColor = "black"
+        // making the trace happen when the mouse is hold in its place
+
+        let isDrawing = false;    
+        document.addEventListener('mousedown', ()=>{
+            isDrawing = true;
+            div.addEventListener('mouseenter',()=>{
+                if(isDrawing === true){
+                    div.style.backgroundColor = "black";
+                }
+            })    
+            document.addEventListener('mouseup',()=>{
+                isDrawing = false;
+            })    
         })
 
         // the button to erase the trace
