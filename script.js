@@ -31,6 +31,8 @@ document.addEventListener('click',(e)=>{
                 mainEngine((customInput.value))
             }
         })
+    }else if(target.includes('clear-grid')){
+        location.reload()
     }
 })
 
@@ -65,6 +67,15 @@ function mainEngine(value) {
         // making the trace happen when hovered    
         div.addEventListener('mouseenter', ()=>{
             div.style.backgroundColor = "black"
+        })
+
+        // the button to erase the trace
+
+        document.addEventListener('click',(e)=>{
+            let divTarget = e.target.className
+            if(divTarget.includes('clear-trace')){
+                div.style.backgroundColor = 'white'
+            }
         })
     }
 }

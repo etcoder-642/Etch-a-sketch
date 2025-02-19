@@ -12,6 +12,20 @@
     
 }
 
+.main {
+    display: flex;
+    overflow: scroll;
+}
+
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.397);
+    color: white;
+    padding: 12px;
+    margin: 0px 4px;
+    min-width: 200px;    
+}
+
+
 .buttons {
     display: flex;
     flex-direction: column;
@@ -32,18 +46,6 @@ button:hover {
     color: white;
 }
 
-.main {
-    display: flex;
-    overflow: scroll;
-}
-
-.sidebar {
-    background-color: rgba(0, 0, 0, 0.397);
-    color: white;
-    padding: 12px;
-    margin: 0px 4px;
-    
-}
 
 input {
     margin: 10px auto;
