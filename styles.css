@@ -61,6 +61,6 @@ input {
     gap: 12px;
 }
 
-div:not(.main, .sidebar, .content, .buttons, .container) {
+div {
     cursor: pointer;
 }
