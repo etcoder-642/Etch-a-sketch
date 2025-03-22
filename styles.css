@@ -60,3 +60,7 @@ input {
     max-width: 240px;
     gap: 12px;
 }
+
+div:not(.main, .sidebar, .content, .buttons, .container) {
+    cursor: pointer;
+}
